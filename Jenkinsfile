@@ -21,8 +21,8 @@ pipeline {
                             reference: '', 
                             trackingSubmodules: false
                         ]
-                    ],
-                    submoduleCfg: []//,
+                    ]//,
+                    // submoduleCfg: []//,
                     // userRemoteConfigs:
                     // [
                     //     [
