@@ -22,7 +22,8 @@ pipeline {
                             trackingSubmodules: false
                         ]
                     ],
-                    submoduleCfg: []//,
+                    userRemoteConfigs: scm.userRemoteConfigs
+                    //submoduleCfg: []//,
                     // userRemoteConfigs:
                     // [
                     //     [
@@ -30,7 +31,7 @@ pipeline {
                     //         url: 'git@github.com:ian-ookla/public-jenkins-proto.git']
                     //     ]
                     // ])
-                    ])
+                ])
             }
         }
         stage('build') {
