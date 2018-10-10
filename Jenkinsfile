@@ -30,7 +30,7 @@ pipeline {
                     //         url: 'git@github.com:ian-ookla/public-jenkins-proto.git']
                     //     ]
                     // ])
-            }
+            })
         }
         stage('build') {
             steps {
