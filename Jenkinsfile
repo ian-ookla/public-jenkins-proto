@@ -22,14 +22,14 @@ pipeline {
                             trackingSubmodules: false
                         ]
                     ],
-                    submoduleCfg: [],
-                    userRemoteConfigs:
-                    [
-                        [
-                            credentialsId: '944fee11-7d97-4388-9802-4bc5304df0cd',
-                            url: 'git@github.com:ian-ookla/public-jenkins-proto.git']
-                        ]
-                    ])
+                    submoduleCfg: []//,
+                    // userRemoteConfigs:
+                    // [
+                    //     [
+                    //         credentialsId: '944fee11-7d97-4388-9802-4bc5304df0cd',
+                    //         url: 'git@github.com:ian-ookla/public-jenkins-proto.git']
+                    //     ]
+                    // ])
             }
         }
         stage('build') {
