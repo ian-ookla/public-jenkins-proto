@@ -43,5 +43,5 @@ pipeline {
 }
 
 def isMainlineBranch() {
-    true
+    false
 }
