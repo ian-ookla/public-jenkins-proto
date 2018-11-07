@@ -6,42 +6,37 @@ pipeline {
     }
 
     stages {
-        stage('scm') {
-            when { equals expected: true, actual: isMainlineBranch() }
+        stage('verify mainline') {
+            when {
+                equals expected: true,
+                actual: isMainlineBranch(scm)
+            }
 
             steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: scm.branches, 
-                    doGenerateSubmoduleConfigurations: false, 
-                    extensions: [
-                        [
-                            $class: 'SubmoduleOption', 
-                            disableSubmodules: false, 
-                            parentCredentials: true, 
-                            recursiveSubmodules: true, 
-                            reference: '', 
-                            trackingSubmodules: false
-                        ]
-                    ],
-                    userRemoteConfigs: scm.userRemoteConfigs
-                ])
+                print "hi"
             }
+
         }
-        stage('build') {
-            steps {
-                echo "Building"
+
+        stage('abort non-mainline') {
+            when {
+                equals expected: false,
+                actual: isMainlineBranch(scm)
             }
-        }
-        
-        stage('test') {
+
             steps {
-                echo "Testing"
+                currentBuild.result = 'ABORTED'
+                error('Aborting non-mainline branch')
             }
         }
     }
 }
 
-def isMainlineBranch() {
-    false
+def isMainlineBranch(scm) {
+    def mainlines = [ /^master$/, /^release\/.*$/, /feature\/live/ ]
+    return null != scm.branches.find { branch ->
+        mainlines.find { mainlineRegEx ->
+            return branch ==~ mainlineRegEx
+        }
+    }
 }
