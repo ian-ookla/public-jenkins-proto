@@ -6,6 +6,9 @@ pipeline {
     }
 
     stages {
+
+        when { equals expected: true, actual: isMainlineBranch() }
+
         stage('scm') {
             steps {
                 checkout([
@@ -38,4 +41,8 @@ pipeline {
             }
         }
     }
-    }
+}
+
+def isMainlineBranch() {
+    true
+}
