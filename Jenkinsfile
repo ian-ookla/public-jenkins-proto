@@ -6,10 +6,9 @@ pipeline {
     }
 
     stages {
-
-        when { equals expected: true, actual: isMainlineBranch() }
-
         stage('scm') {
+            when { equals expected: true, actual: isMainlineBranch() }
+
             steps {
                 checkout([
                     $class: 'GitSCM',
