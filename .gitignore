@@ -1,0 +1,58 @@
+# osx desktop file
+.DS_Store
+
+# IntelliJ config files
+.idea/
+*.iml
+
+# gradle config folders
+.gradle/
+
+#gradle build folders
+build/
+
+# whitelist common location for build scripts
+!**/other/build/
+
+# vim swap files
+*.swp
+
+# python compiled files
+*.pyc
+
+# Required by AI-129.737825 to build properly
+local.properties
+
+# Our build properties. See README.md
+o2build.properties
+
+# Android studio captures
+/captures/
+
+# Binaries are copied to this location as part
+# of the build process
+**/jniLibs/
+
+#ndk files
+native/project/libs/
+native/project/obj/
+native/test/libs/
+native/test/obj/
+
+#eclipse
+.classpath
+.project
+.cproject
+.settings
+native/eclipse_ndk/gen/
+native/eclipse_ndk/bin/
+native/eclipse_ndk/obj/
+native/eclipse_ndk/libs/
+
+# ctags files
+.tags*
+native/project/tags
+
+# jenkins scripts build this
+/out
+
