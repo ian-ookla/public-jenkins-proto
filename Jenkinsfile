@@ -25,7 +25,6 @@ pipeline {
             }
 
             steps {
-                currentBuild.result = 'ABORTED'
                 error('Aborting non-mainline branch')
             }
         }
