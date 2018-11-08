@@ -33,7 +33,7 @@ pipeline {
         
         stage('Validate build type') {
             when {
-                equals expected: BuildType.UNKNOWN, actual: getBuildType(scm)
+                equals expected: BuildType.UNKNOWN, actual: getBuildType()
             }
 
             steps {
@@ -44,7 +44,7 @@ pipeline {
         
         stage('build_buddy') {
             when {
-                equals expected: BuildType.BUDDY, actual: getBuildType(scm)
+                equals expected: BuildType.BUDDY, actual: getBuildType()
             }
 
             steps {
@@ -54,7 +54,7 @@ pipeline {
         
         stage('build_release') {
             when {
-                equals expected: BuildType.RELEASE, actual: getBuildType(scm)
+                equals expected: BuildType.RELEASE, actual: getBuildType()
             }
             
             steps {
