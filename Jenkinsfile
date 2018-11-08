@@ -69,9 +69,10 @@ pipeline {
  * @param branches list of current branches
  */
 def isMainlineBranch(branches) {
-    def mainlines = [ /^master$/, /^release\/.*$/, /feature\/live/, /task\/buildType/ ]
+    def mainlines = [ /^master$/, /^release\/.*$/, /^feature\/live$/, /^task\/buildType$/ ]
     return null != branches.find { branch ->
         mainlines.find { mainlineRegEx ->
+            println "branch: ${branch} re: ${mainlineRegEx} match: ${branch ==~ mainlineRegEx}"
             return branch ==~ mainlineRegEx
         }
     }
