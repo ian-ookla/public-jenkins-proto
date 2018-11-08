@@ -66,7 +66,7 @@ def isMainlineBranch(branches) {
 }
 
 enum BuildType {
-    BUDDY, RELEASE, UNSUPPORTED
+    BUDDY, RELEASE, UNKNOWN
 }
 
 def getBuildType(scm) {
