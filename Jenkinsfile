@@ -30,6 +30,18 @@ pipeline {
         //             ]
         //         ]
         // }
+        
+        stage('build_buddy') {
+            when {
+                equals expected: BuildType.UNKNOWN, actual: getBuildType(scm)
+            }
+
+            steps {
+                error('Failing on unknown build type')
+            }
+        }
+        
+        
         stage('build_buddy') {
             when {
                 equals expected: BuildType.BUDDY, actual: getBuildType(scm)
