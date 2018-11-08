@@ -31,7 +31,7 @@ pipeline {
         //         ]
         // }
         
-        stage('build_buddy') {
+        stage('Validate build type') {
             when {
                 equals expected: BuildType.UNKNOWN, actual: getBuildType(scm)
             }
