@@ -70,7 +70,7 @@ enum BuildType {
 }
 
 def getBuildType(scm) {
-    if (env.CHANGE_ID.isInteger()) {
+    if (env.CHANGE_ID != null) {
         return BuildType.BUDDY
     } else if (isMainlineBranch(scm.branches)) {
         return BuildType.RELEASE
