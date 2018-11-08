@@ -76,6 +76,10 @@ def getBuildType(scm) {
 }
 
 def getBuildType2(scm) {
+    
+    println "SCM ${scm}"
+    println "BRANCHES ${scm.branches}"
+    
     if (env.CHANGE_ID != null) {
         return BuildType.BUDDY
     } else if (isMainlineBranch(scm.branches)) {
