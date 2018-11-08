@@ -8,18 +8,6 @@ pipeline {
     stages {
         stage('verify mainline') {
             when {
-                equals expected: true,
-                actual: isMainlineBranch(scm)
-            }
-
-            steps {
-                print "hi"
-            }
-
-        }
-
-        stage('abort non-mainline') {
-            when {
                 equals expected: false,
                 actual: isMainlineBranch(scm)
             }
@@ -27,6 +15,7 @@ pipeline {
             steps {
                 error('Aborting non-mainline branch')
             }
+
         }
     }
 }
