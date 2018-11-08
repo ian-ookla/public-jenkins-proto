@@ -58,8 +58,8 @@ enum BuildType {
 
 def getBuildType() {
     if (env.CHANGE_ID == null) {
-        return RELEASE
+        return BuildType.RELEASE
     } else {
-        return BUDDY
+        return BuildType.BUDDY
     }
 }
