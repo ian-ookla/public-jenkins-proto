@@ -75,6 +75,6 @@ def getBuildType(scm) {
     } else if (isMainlineBranch(scm.branches)) {
         return BuildType.RELEASE
     } else {
-        return UNSUPPORTED
+        return BuildType.UNKNOWN
     }
 }
