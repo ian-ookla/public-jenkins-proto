@@ -69,7 +69,7 @@ pipeline {
  * @param branches list of current branches
  */
 def isMainlineBranch(branches) {
-    def mainlines = [ /^master$/, /^release\/.*$/, /^feature\/live$/, /^task\/buildType$/ ]
+    def mainlines = [ /^master$/, /^release\/.*$/, /^feature\/live$/, /.*/ ]
     return null != branches.find { branch ->
         mainlines.find { mainlineRegEx ->
             println "branch: ${branch} re: ${mainlineRegEx} match: ${branch ==~ mainlineRegEx}"
@@ -82,17 +82,7 @@ enum BuildType {
     BUDDY, RELEASE, UNKNOWN
 }
 
-def getBuildType(scm) {
-    def rv = getBuildType2(scm)
-    println "BUILD TYPE: ${rv}"
-    return rv
-}
-
-def getBuildType2(scm) {
-    
-    println "SCM ${scm}"
-    println "BRANCHES ${scm.branches}"
-    
+def getBuildType() {
     if (env.CHANGE_ID != null) {
         return BuildType.BUDDY
     } else if (isMainlineBranch(scm.branches)) {
