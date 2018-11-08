@@ -32,7 +32,7 @@ pipeline {
         // }
         stage('build_buddy') {
             when {
-                equals expected: BuildType.BUDDY, actual: getBuildType()
+                equals expected: BuildType.BUDDY, actual: getBuildType(scm)
             }
 
             steps {
@@ -42,7 +42,7 @@ pipeline {
         
         stage('build_release') {
             when {
-                equals expected: BuildType.RELEASE, actual: getBuildType()
+                equals expected: BuildType.RELEASE, actual: getBuildType(scm)
             }
             
             steps {
@@ -52,14 +52,29 @@ pipeline {
     }
 }
 
-enum BuildType {
-    BUDDY, RELEASE
+/**
+ * Returns true if any of the current branches are a mainline branch, otherwise false
+ * @param branches list of current branches
+ */
+def isMainlineBranch(branches) {
+    def mainlines = [ /^master$/, /^release\/.*$/, /feature\/live/ ]
+    return null != branches.find { branch ->
+        mainlines.find { mainlineRegEx ->
+            return branch ==~ mainlineRegEx
+        }
+    }
 }
 
-def getBuildType() {
-    if (env.CHANGE_ID == null) {
+enum BuildType {
+    BUDDY, RELEASE, UNSUPPORTED
+}
+
+def getBuildType(scm) {
+    if (env.CHANGE_ID.isInteger()) {
+        return BuildType.BUDDY
+    } else if (isMainlineBranch(scm.branches)) {
         return BuildType.RELEASE
     } else {
-        return BuildType.BUDDY
+        return UNSUPPORTED
     }
 }
