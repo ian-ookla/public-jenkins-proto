@@ -70,6 +70,12 @@ enum BuildType {
 }
 
 def getBuildType(scm) {
+    def rv = getBuildType2(scm)
+    println "BUILD TYPE: ${rv}"
+    return rv
+}
+
+def getBuildType2(scm) {
     if (env.CHANGE_ID != null) {
         return BuildType.BUDDY
     } else if (isMainlineBranch(scm.branches)) {
