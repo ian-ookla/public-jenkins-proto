@@ -82,6 +82,8 @@ enum BuildType {
     BUDDY, RELEASE, UNKNOWN
 }
 
+println "THIS ${this}"
+
 def getBuildType() {
     if (env.CHANGE_ID != null) {
         return BuildType.BUDDY
