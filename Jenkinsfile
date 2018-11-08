@@ -1,3 +1,5 @@
+def x = "IAN"
+
 pipeline {
     agent any
 
@@ -30,6 +32,13 @@ pipeline {
         //             ]
         //         ]
         // }
+        
+        stage('Ian') {
+            steps {
+                echo "IAN ${x}"
+            }
+            
+        }
         
         stage('Validate build type') {
             when {
