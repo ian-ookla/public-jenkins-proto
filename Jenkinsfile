@@ -66,13 +66,17 @@ pipeline {
     post {
         always {
             // junit '**/test.xml'
-            if (false) {
-                echo "ALWAYS"
-            } else {
-                echo "NOPE"
-            }
+            echoAlways()
             
         }
+    }
+}
+
+def echoAlways() {
+    if (false) {
+        echo "ALWAYS"
+    } else {
+        echo "NOPE"
     }
 }
 
