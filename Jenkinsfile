@@ -50,6 +50,13 @@ pipeline {
             steps {
                 echo "Building buddy"
             }
+            
+            post {
+                always {
+                    // junit '**/test.xml'
+                    echoAlways()
+                }
+            }
         }
         
         stage('build_release') {
@@ -63,14 +70,7 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // junit '**/test.xml'
-            node('any') {
-                echoAlways()
-            }
-        }
-    }
+
 }
 
 def echoAlways() {
