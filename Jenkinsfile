@@ -42,6 +42,7 @@ pipeline {
             
             post {
                 always {
+                    echo "HERE"
                     config(always)
                 }
             }
@@ -74,6 +75,7 @@ pipeline {
 }
 
 def config(always) {
+    echo ("THEREss")
     always {
         echoAlways()
     }
