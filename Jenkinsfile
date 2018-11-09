@@ -65,7 +65,13 @@ pipeline {
 
     post {
         always {
-            junit '**/test.xml'
+            // junit '**/test.xml'
+            if (false) {
+                echo "ALWAYS"
+            } else {
+                echo "NOPE"
+            }
+            
         }
     }
 }
