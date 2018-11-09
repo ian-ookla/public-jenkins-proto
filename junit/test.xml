@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ookla.mobile4.app.AppInitializerTest" tests="41" skipped="0" failures="0" errors="0" timestamp="2018-11-07T20:07:14" hostname="orko2.local" time="0.986">
+  <properties/>
+  <testcase name="onCreate_AdViewPreLoader_initializedAndReleased" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.904"/>
+  <testcase name="onCreate_initializeIspManagerEventAdapter" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.004"/>
+  <testcase name="shouldAlertZDBBOnForegroundEntry" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.005"/>
+  <testcase name="globalAnalyticEventDetector_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.004"/>
+  <testcase name="onCreate_PrivacyPolicyReminder_registerListener" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.003"/>
+  <testcase name="onCreate_initializeServerManagerRLAdapter" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldMakeAmazonAdsManagerObserverDependencies" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldPromptOnNativeLibraryLoadFailure" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.003"/>
+  <testcase name="onCreate_initializeEngineRLAdapter" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.003"/>
+  <testcase name="shouldRegisterValidationReportBuilderManagerForActivityLifecycleCallbacks" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldNotAlertZDBBOnForegroundExit" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_AnalyticsPrivacyResponder_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.003"/>
+  <testcase name="onCreate_PrivacyWizardPolicy_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldInitializeSafeTimerManager" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_AdvancedTrackingManger_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldRegisterValidationReportBuilderManagerForValidationEvents" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_GDPRPrivacyRestrictedManager_observeDependencies" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="locationUpdatePolicy_observesDependenciesBeforeConfigRefetchSentinel" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.004"/>
+  <testcase name="test_boltsShouldAlarmOnUnhandledException" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.003"/>
+  <testcase name="onCreate_GoogleAdvertisingIdPref_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldInitializeSessionManager" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_ConfigReportManager_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldMakeUserPrefsChangeEventRLAdapterObserveDependencies" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="onCreate_initializeServerManager" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="signalStrengthMonitor_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldRegisterConfigurationManagerWithCurrentLocationManager" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_initializeIspManager" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="onCreate_analyticManager_setConfigHandler" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldRequestLoadedNoticeBeforeLoadingLibraries" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldNotPromptOnNativeLibraryLoadSuccess" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldInitializeReportManagerOnSerialBackgroundWorker" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="shouldRegisterListenersBeforeEnginePrepare" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldInitializeIdleMonitor" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldMakeAppMonetManagerObserverDependencies" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="onCreate_Crashlytics_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="bgReportTriggerManager_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="speedTestHandlerShouldBeInitializedBySpeedTestHandlerInitializer" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="onCreate_ZDBBEvents_initialized" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.002"/>
+  <testcase name="onCreate_initializesAdsSubsystemInOrder" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldInitializeIabConsentManagerBeforeAmazonAndAppMonet" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <testcase name="shouldMakeSamsungObserveDependencies" classname="com.ookla.mobile4.app.AppInitializerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
