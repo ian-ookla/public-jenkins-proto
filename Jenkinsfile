@@ -40,7 +40,11 @@ pipeline {
                 
             }
             
-            configure(post)
+            post {
+                always {
+                    config(always)
+                }
+            }
         }
         
         
@@ -69,8 +73,8 @@ pipeline {
 
 }
 
-def config(post) {
-    post.always {
+def config(always) {
+    always {
         echoAlways()
     }
 }
