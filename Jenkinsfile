@@ -63,7 +63,7 @@ pipeline {
     }
 
     post {
-        steps {
+        always {
             junit '**/test.xml'
         }
     }
