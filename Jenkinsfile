@@ -35,6 +35,7 @@ pipeline {
         
         stage('junit') {
             steps {
+                sh "touch junit/test.xml"
                 sh "false"
                 
             }
