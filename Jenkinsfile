@@ -40,9 +40,7 @@ pipeline {
                 
             }
             
-            post {
-                configure(post)
-            }
+            configure(post)
         }
         
         
