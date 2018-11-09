@@ -39,6 +39,13 @@ pipeline {
                 sh "false"
                 
             }
+            
+            post {
+                always {
+                    // junit '**/test.xml'
+                    echoAlways()
+                }
+            }
         }
         
         
@@ -50,13 +57,7 @@ pipeline {
             steps {
                 echo "Building buddy"
             }
-            
-            post {
-                always {
-                    // junit '**/test.xml'
-                    echoAlways()
-                }
-            }
+
         }
         
         stage('build_release') {
