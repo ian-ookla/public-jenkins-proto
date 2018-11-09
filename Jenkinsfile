@@ -43,7 +43,7 @@ pipeline {
             post {
                 always {
                     echo "HERE"
-                    canIJunit(steps)
+                    canIJunit()
                 }
             }
         }
@@ -74,8 +74,8 @@ pipeline {
 
 }
 
-def canIJunit(steps) {
-    steps.junit '**/*.xml'
+def canIJunit() {
+    junit '**/*.xml'
 }
 
 def echoAlways() {
