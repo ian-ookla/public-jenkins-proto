@@ -60,11 +60,11 @@ pipeline {
                 echo "Building release"
             }
         }
-        
-        post {
-            steps {
-                junit '**/test.xml'
-            }
+    }
+
+    post {
+        steps {
+            junit '**/test.xml'
         }
     }
 }
