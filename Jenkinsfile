@@ -43,7 +43,7 @@ pipeline {
             post {
                 always {
                     echo "HERE"
-                    canIJunit(stage)
+                    canIJunit(steps)
                 }
             }
         }
