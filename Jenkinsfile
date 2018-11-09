@@ -36,7 +36,7 @@ pipeline {
         stage('junit') {
             steps {
                 sh "false"
-                junit '**/test.xml'
+                
             }
         }
         
@@ -58,6 +58,12 @@ pipeline {
             
             steps {
                 echo "Building release"
+            }
+        }
+        
+        post {
+            steps {
+                junit '**/test.xml'
             }
         }
     }
