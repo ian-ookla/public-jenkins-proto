@@ -3,8 +3,6 @@
 pipeline {
     agent any
     
-    def x = "IAN"
-
     environment {
         APPLICATION_NAME = "my_example"
     }
@@ -35,20 +33,10 @@ pipeline {
         //         ]
         // }
         
-        stage('Ian') {
+        stage('junit') {
             steps {
-                echo "IAN ${x}"
-            }
-            
-        }
-        
-        stage('Validate build type') {
-            when {
-                equals expected: BuildType.UNKNOWN, actual: getBuildType()
-            }
-
-            steps {
-                error('Failing on unknown build type')
+                sh "false"
+                junit '**/test.xml'
             }
         }
         
