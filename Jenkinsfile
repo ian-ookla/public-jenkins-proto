@@ -41,19 +41,8 @@ pipeline {
             }
             
             post {
-                always {
-                    // junit '**/test.xml'
-                    echoAlways()
-                }
+                configure(post)
             }
-            
-            post {
-                always {
-                    // junit '**/test.xml'
-                    echoAlways()
-                }
-            }
-
         }
         
         
@@ -80,6 +69,12 @@ pipeline {
     }
 
 
+}
+
+def config(post) {
+    post.always {
+        echoAlways()
+    }
 }
 
 def echoAlways() {
