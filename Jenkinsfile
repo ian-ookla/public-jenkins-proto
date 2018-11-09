@@ -73,6 +73,7 @@ pipeline {
 }
 
 def echoAlways() {
+    echo "currentBuild: ${currentBuild}"
     if (false) {
         echo "ALWAYS"
     } else {
