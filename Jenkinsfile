@@ -43,7 +43,7 @@ pipeline {
             post {
                 always {
                     echo "HERE"
-                    config(always)
+                    echoAlways()
                 }
             }
         }
