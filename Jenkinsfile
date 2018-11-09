@@ -1,7 +1,9 @@
-def x = "IAN"
+
 
 pipeline {
     agent any
+    
+    def x = "IAN"
 
     environment {
         APPLICATION_NAME = "my_example"
