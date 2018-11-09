@@ -46,6 +46,14 @@ pipeline {
                     echoAlways()
                 }
             }
+            
+            post {
+                always {
+                    // junit '**/test.xml'
+                    echoAlways()
+                }
+            }
+
         }
         
         
