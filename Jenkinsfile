@@ -43,7 +43,7 @@ pipeline {
             post {
                 always {
                     echo "HERE"
-                    echoAlways()
+                    canIJunit(stage)
                 }
             }
         }
@@ -74,11 +74,8 @@ pipeline {
 
 }
 
-def config(always) {
-    echo ("THEREss")
-    always {
-        echoAlways()
-    }
+def canIJunit(steps) {
+    steps.junit '**/*.xml'
 }
 
 def echoAlways() {
