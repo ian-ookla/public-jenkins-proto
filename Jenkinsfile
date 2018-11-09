@@ -66,8 +66,9 @@ pipeline {
     post {
         always {
             // junit '**/test.xml'
-            echoAlways()
-            
+            node('any') {
+                echoAlways()
+            }
         }
     }
 }
