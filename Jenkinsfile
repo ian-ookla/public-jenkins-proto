@@ -14,7 +14,7 @@ pipeline {
             post {
                 always {
                     junit '**/*.xml'
-                    archiveArtifacts artifacts 'Mobile4/build/outputs/apk/**/*.apk'
+                    archiveArtifacts artifacts: 'Mobile4/build/outputs/apk/**/*.apk'
                 }
             }
         }
